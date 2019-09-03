@@ -9,6 +9,13 @@
       <el-button type="danger">危险按钮</el-button>
       <el-button type="primary" icon="el-icon-search">搜索</el-button>
     </el-row>
+    <ul>
+      <li>sddf</li>
+      <li>sddf</li>
+      <li>sddf</li>
+      <li>sddf</li>
+      <li>sddf</li>
+    </ul>
   </div>
 </template>
 
@@ -30,21 +37,9 @@ export default {
   .el-row{
     background: yellow;
     button:nth-child(1){
-      font-size: 50px;
+      font-size: 14px;
     }
   }
-}
-h1,
-h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 a {
   color: #42b983;
