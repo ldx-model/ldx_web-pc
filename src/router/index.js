@@ -14,7 +14,14 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: (resolve) => require(['@/views/home'], resolve)
+      component: (resolve) => require(['@/views/home'], resolve),
+      redirect: '/home/student',
+      children: [
+        {
+          path: '/home/:id',
+          name: 'student',
+          component: (resolve) => require(['@/views/home'], resolve)
+        }]
     },
     {
       path: '/studentReg',

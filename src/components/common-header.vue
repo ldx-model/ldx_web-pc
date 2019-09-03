@@ -35,7 +35,7 @@ export default {
       console.log(111)
     },
     registe () {
-      console.log(222)
+      this.$router.push({name: 'studentReg'})
     }
   }
 }

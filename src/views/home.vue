@@ -2,9 +2,15 @@
   <div class="home-content">
     <commonheader></commonheader>
     <div class="content-left">
-      <p class="left_title">这是一个</p>
-      <p class="left_title">为学生创造价值的平台。</p>
-      <p class="left_level">level up是一家致力于对接大学生与企业的服务平台，理念是给大学生提供线上的游戏化实习任务。</p>
+      <p v-if="activename==='student'" class="left_title">
+        这是一个<br />为学生创造价值的平台。
+      </p>
+      <p v-if="activename==='level'" class="left_title">
+        注册成功<br/>欢迎加入LEVEL UP
+      </p>
+      <p class="left_level">
+        level up是一家致力于对接大学生与企业的服务平台，理念<br />是给大学生提供线上的游戏化实习任务。
+      </p>
     </div>
     <div class="content-footer">
       <el-button round>下载移动端</el-button>
@@ -20,30 +26,36 @@ export default {
     commonheader
   },
   data () {
-    return {}
+    return {
+      activename: ''
+    }
   },
-  methods: {}
+  methods: {},
+  mounted () {
+    this.activename = this.$route.params.id
+  },
+  watch: {
+    $route (val) {
+      this.activename = val.params.id
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
 .home-content {
-  margin:0 50px;
+  margin: 0 50px;
   .content-left {
-     margin:150px 0;
-    .left_title{
+    margin: 150px 0;
+    .left_title {
       font-size: 24px;
-      margin:0;
-    }
-    .left_level{
-      width: 30%;
+      letter-spacing: 2px;
     }
   }
   .el-button {
     background: #c54f8b;
-    color:white;
+    color: white;
     border: none;
     padding: 10px 20px;
   }
 }
-
 </style>

@@ -7,13 +7,13 @@
           <el-step v-for="(item,index) in stepList" :key="index" :title="item.title" />
         </el-steps>
         <div v-if="active === 0">
-            <verphone @next="next"/>
+          <verphone @next="next" />
         </div>
         <div v-if="active === 1">
-           <vercompany @next="next"/>
+          <vercompany @next="next" />
         </div>
         <div v-if="active === 2">
-            3
+          <sucregiste></sucregiste>
         </div>
       </div>
     </div>
@@ -23,12 +23,14 @@
 import commonheader from '@/components/common-header'
 import verphone from '@/views/register/verphone'
 import vercompany from '@/views/register/fillCominfor'
+import sucregiste from '@/views/register/sucRegiste'
 
 export default {
   components: {
     commonheader,
     verphone,
-    vercompany
+    vercompany,
+    sucregiste
   },
   data () {
     return {

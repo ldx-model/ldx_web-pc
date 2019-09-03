@@ -6,14 +6,14 @@
         <el-steps :active="active">
           <el-step v-for="(item,index) in stepList" :key="index" :title="item.title" />
         </el-steps>
-        <div v-if="active === 0">
-            <verphone @next="next"/>
-        </div>
         <div v-if="active === 1">
-           <verstudent @next="next"/>
+          <verphone @next="next" />
         </div>
         <div v-if="active === 2">
-            3
+          <verstudent @next="next" />
+        </div>
+        <div v-if="active === 3">
+          <sucregiste></sucregiste>
         </div>
       </div>
     </div>
@@ -23,16 +23,18 @@
 import commonheader from '@/components/common-header'
 import verphone from '@/views/register/verphone'
 import verstudent from '@/views/register/fillStuinfor'
+import sucregiste from '@/views/register/sucRegiste'
 
 export default {
   components: {
     commonheader,
     verphone,
-    verstudent
+    verstudent,
+    sucregiste
   },
   data () {
     return {
-      active: 0,
+      active: 1,
       stepList: [
         {
           title: '设置登录名'
@@ -48,7 +50,7 @@ export default {
   },
   methods: {
     next () {
-      if (this.active++ >= 2) this.active = 0
+      if (this.active++ >= 3) this.active = 0
     }
   }
 }
