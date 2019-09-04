@@ -32,6 +32,36 @@ export default new Router({
       path: '/companyReg',
       name: 'companyReg',
       component: (resolve) => require(['@/views/companyReg'], resolve)
+    },
+    {
+      path: '/firststep',
+      name: 'firststep',
+      component: (resolve) => require(['@/views/taskpage/firststep'], resolve)
+    },
+    {
+      path: '/secstep',
+      name: 'secstep',
+      component: (resolve) => require(['@/views/taskpage/secstep'], resolve)
+    },
+    {
+      path: '/thirdstep',
+      name: 'thirdstep',
+      component: (resolve) => require(['@/views/taskpage/thirdstep'], resolve)
+    },
+    {
+      path: '/laststep',
+      name: 'laststep',
+      component: (resolve) => require(['@/views/taskpage/laststep'], resolve)
+    },
+    {
+      path: '/success',
+      name: 'success',
+      component: (resolve) => require(['@/views/taskpage/success'], resolve)
+    },
+    {
+      path: '/error',
+      name: 'error',
+      component: (resolve) => require(['@/views/taskpage/error'], resolve)
     }
   ]
 })

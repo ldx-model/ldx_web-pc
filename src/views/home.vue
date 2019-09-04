@@ -1,6 +1,6 @@
 <template>
   <div class="home-content">
-    <commonheader></commonheader>
+    <commonheader :showLogin="showLogin"></commonheader>
     <div class="content-left">
       <p v-if="activename==='student'" class="left_title">
         这是一个<br />为学生创造价值的平台。
@@ -15,7 +15,7 @@
     <div class="content-footer">
       <el-button round>下载移动端</el-button>
       <el-button round>使用网页版</el-button>
-      <p>微信小程序也具有同样的功能</p>
+      <p class="footer_p">. 微信小程序也具有同样的功能</p>
     </div>
   </div>
 </template>
@@ -27,7 +27,8 @@ export default {
   },
   data () {
     return {
-      activename: ''
+      activename: '',
+      showLogin: true
     }
   },
   methods: {},
@@ -43,12 +44,17 @@ export default {
 </script>
 <style scoped lang="scss">
 .home-content {
-  margin: 0 50px;
+  margin: 0 100px;
   .content-left {
     margin: 150px 0;
     .left_title {
       font-size: 24px;
       letter-spacing: 2px;
+      line-height:28px
+    }
+    .left_level{
+      line-height:25px;
+      margin-top:15px;
     }
   }
   .el-button {
@@ -56,6 +62,9 @@ export default {
     color: white;
     border: none;
     padding: 10px 20px;
+  }
+  .footer_p{
+   margin-top:15px;
   }
 }
 </style>

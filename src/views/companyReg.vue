@@ -1,6 +1,6 @@
 <template>
   <div class="student-registe">
-    <commonheader></commonheader>
+    <commonheader :showLogin="showLogin"></commonheader>
     <div class="registe-step">
       <div class="reset-main">
         <el-steps :active="active">
@@ -34,6 +34,7 @@ export default {
   },
   data () {
     return {
+      showLogin: true,
       active: 0,
       stepList: [
         {
@@ -57,6 +58,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .student-registe {
-  margin: 0 50px;
+  margin: 0 100px;
 }
 </style>

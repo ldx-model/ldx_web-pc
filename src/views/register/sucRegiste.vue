@@ -7,9 +7,9 @@
       </p>
     </div>
     <div class="sucregiste-footer">
-      <el-button round>发布任务</el-button>
+      <el-button round @click="publish">发布任务</el-button>
       <el-button round>编辑资料</el-button>
-      <p>微信小程序也具有同样的功能</p>
+      <p class="footer_p">. 微信小程序也具有同样的功能</p>
     </div>
   </div>
 </template>
@@ -17,6 +17,11 @@
 export default {
   data () {
     return {}
+  },
+  methods: {
+    publish () {
+      this.$router.push('/firststep')
+    }
   }
 }
 </script>
@@ -27,6 +32,11 @@ export default {
         .left_title{
             font-size: 24px;
             letter-spacing: 2px;
+            line-height:28px
+        }
+        .left_level{
+          line-height:25px;
+          margin-top:15px;
         }
     }
     .el-button {
@@ -34,6 +44,9 @@ export default {
         color:white;
         border: none;
         padding: 10px 20px;
+    }
+    .footer_p{
+        margin-top:15px;
     }
 }
 </style>
