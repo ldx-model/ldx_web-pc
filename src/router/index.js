@@ -62,6 +62,16 @@ export default new Router({
       path: '/error',
       name: 'error',
       component: (resolve) => require(['@/views/taskpage/error'], resolve)
+    },
+    {
+      path: '/students',
+      name: 'students',
+      component: (resolve) => require(['@/views/student/student'], resolve)
+    },
+    {
+      path: '/companys',
+      name: 'companys',
+      component: (resolve) => require(['@/views/company/company'], resolve)
     }
   ]
 })

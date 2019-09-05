@@ -15,7 +15,7 @@
     <div class="content-footer">
       <el-button round>下载移动端</el-button>
       <el-button round>使用网页版</el-button>
-      <p class="footer_p">. 微信小程序也具有同样的功能</p>
+      <p class="footer_p"><sup>·</sup> 微信小程序也具有同样的功能</p>
     </div>
   </div>
 </template>

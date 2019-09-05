@@ -57,8 +57,8 @@ export default {
 </script>>
 <style scoped lang="scss">
 .header-box{
-  height: 100px;
-  line-height: 100px;
+  height: 80px;
+  line-height: 80px;
   padding: 10px 0;
   span{
     padding-left: 20px;
@@ -87,7 +87,7 @@ export default {
 </style>
 <style lang="scss">
 .header-box {
-    /deep/.el-input__inner {
+    .el-input__inner {
       background: transparent;
       border-radius:15px;
       height: 25px;

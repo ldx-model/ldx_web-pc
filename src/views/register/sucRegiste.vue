@@ -9,7 +9,7 @@
     <div class="sucregiste-footer">
       <el-button round @click="publish">发布任务</el-button>
       <el-button round>编辑资料</el-button>
-      <p class="footer_p">. 微信小程序也具有同样的功能</p>
+      <p class="footer_p"><sup style="margin-top:-10px">·</sup>微信小程序也具有同样的功能</p>
     </div>
   </div>
 </template>
