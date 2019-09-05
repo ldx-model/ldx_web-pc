@@ -97,18 +97,16 @@ export default {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  justify-content: flex-start;
+  justify-content: space-between;
   font-size:14px;
-  .pasttask_con:nth-child(odd){
-      margin-right: 120px;
-  }
   .pasttask_con {
     position: relative;
     display: flex;
     box-sizing: border-box;
     margin: 20px 0px 20px 0;
     border-radius: 20px;
-    background: #f5f5f5;
+    // background: #f5f5f5;
+    background: #fff;
     padding: 15px 20px;
     .left{
         margin-right:20px;

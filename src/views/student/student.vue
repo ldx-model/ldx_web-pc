@@ -1,19 +1,27 @@
 <template>
   <div class="student_pages">
-    <commonheader :showSearch="showSearch"></commonheader>
-    <synopsis :information="information"></synopsis>
+    <div style="margin:0px 100px;">
+      <commonheader :showSearch="showSearch"></commonheader>
+      <synopsis :information="information"></synopsis>
+    </div>
     <div class="student-con">
       <el-tabs v-model="active" @tab-click="handleClick">
-        <el-tab-pane label="个人技能" name="first">用户管理</el-tab-pane>
-        <el-tab-pane label="过往任务" name="second">
-          <pasttask :down="down"></pasttask>
+        <el-tab-pane label="个人技能" name="first">
+          <div style="margin:50px  100px;">用户管理</div>
         </el-tab-pane>
-        <el-tab-pane label="作品浏览" name="third">角色管理</el-tab-pane>
-        <el-tab-pane label="评价" name="fourth">评价</el-tab-pane>
+        <el-tab-pane label="过往任务" name="second">
+          <pasttask :down="down" style="margin:50px 100px;"></pasttask>
+        </el-tab-pane>
+        <el-tab-pane label="作品浏览" name="third">
+          <div style="margin:50px 100px;">用户管理</div>
+        </el-tab-pane>
+        <el-tab-pane label="评价" name="fourth">
+          <div style="margin:50px 100px;">用户管理</div>
+        </el-tab-pane>
+        <div class="student_pages--foot">
+          <commonfoot></commonfoot>
+        </div>
       </el-tabs>
-    </div>
-    <div class="student_pages--foot">
-      <commonfoot></commonfoot>
     </div>
   </div>
 </template>
@@ -51,18 +59,26 @@ export default {
 </script>
 <style scoped lang="scss">
 .student_pages {
-  margin: 0 100px;
   .student-con {
     margin-top: 20px;
   }
-  .student_pages--foot{
-    margin-top: 50px;
-    margin-bottom: 40px;
+  .student_pages--foot {
+    margin: 50px 100px 40px 100px;
   }
 }
 </style>
 <style lang="scss">
 .student_pages {
+  .el-tabs__header {
+    margin: 0px;
+  }
+  .el-tabs__nav {
+    margin-left: 100px;
+  }
+  .el-tabs__content {
+    background: #f5f5f5;
+    min-height: calc(100vh - 280px);
+  }
   .el-tabs__item {
     color: #b7b7b7;
   }

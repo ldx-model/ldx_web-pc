@@ -42,6 +42,8 @@ export default {}
     display: flex;
     ul {
       margin: 0 100px;
+      display: flex;
+      flex-direction: column;
     }
     ul > li {
       font-size: 12px;

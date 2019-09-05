@@ -1,20 +1,26 @@
 <template>
   <div class="company_pages">
-    <commonheader :showSearch="showSearch"></commonheader>
+    <div style="margin:0 100px;">
+      <commonheader :showSearch="showSearch"></commonheader>
     <synopsis :information="information"></synopsis>
+    </div>
     <div class="company-con">
       <el-tabs v-model="active" @tab-click="handleClick">
         <el-tab-pane label="进行任务" name="first">
-          <pasttask></pasttask>
+          <pasttask style="margin:50px  100px;"></pasttask>
         </el-tab-pane>
         <el-tab-pane label="过往任务" name="second">
-          <pasttask :down="dowm"></pasttask>
+          <pasttask :down="dowm" style="margin:50px  100px;"></pasttask>
         </el-tab-pane>
-        <el-tab-pane label="评价" name="third">评价</el-tab-pane>
-      </el-tabs>
-    </div>
-    <div class="company_pages--foot">
+        <el-tab-pane label="评价" name="third">
+          <div style="margin:50px  100px;">
+            111
+          </div>
+        </el-tab-pane>
+         <div class="company_pages--foot">
       <commonfoot></commonfoot>
+    </div>
+      </el-tabs>
     </div>
   </div>
 </template>
@@ -51,18 +57,26 @@ export default {
 </script>
 <style scoped lang="scss">
 .company_pages {
-  margin: 0 100px;
   .company-con {
     margin-top: 20px;
   }
   .company_pages--foot{
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin: 50px 100px 40px 100px;
   }
 }
 </style>
 <style lang="scss">
 .company_pages {
+  .el-tabs__header {
+    margin: 0px;
+  }
+  .el-tabs__nav {
+    margin-left: 100px;
+  }
+  .el-tabs__content {
+    background: #f5f5f5;
+    min-height: calc(100vh - 280px);
+  }
   .el-tabs__item {
     color: #b7b7b7;
   }
