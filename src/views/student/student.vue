@@ -53,7 +53,7 @@ export default {
   data () {
     return {
       showSearch: true,
-      active: 'fourth',
+      active: 'second',
       down: true,
       information: {
         nick_name: '沙田伊莱莎',
