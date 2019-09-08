@@ -72,6 +72,16 @@ export default new Router({
       path: '/companys',
       name: 'companys',
       component: (resolve) => require(['@/views/company/company'], resolve)
+    },
+    {
+      path: '/messagelist',
+      name: 'messagelist',
+      component: (resolve) => require(['@/views/messagelist'], resolve)
+    },
+    {
+      path: '/taskhall',
+      name: 'taskhall',
+      component: (resolve) => require(['@/views/taskHall'], resolve)
     }
   ]
 })

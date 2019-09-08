@@ -7,14 +7,20 @@
         <br />请设置奖励金额和截止日期及支付方式。
       </p>
       <div class="top_con">
-          <el-input class="top_title-input" suffix-icon="el-icon-goods"  v-model="money"></el-input>
-          <el-date-picker class="top_title-input" type="date" v-model="date"></el-date-picker>
+        <el-input class="top_title-input" suffix-icon="el-icon-goods" v-model="money"></el-input>
+        <el-date-picker class="top_title-input" type="date" v-model="date"></el-date-picker>
+        <div style="margin-top:20px;">
           <ul>
-              <li v-for="(item,index) in paylist" :key="index" @click="changeClick(item,index)">
-                 <img :src="item.payImg">
-              </li>
+            <li v-for="(item,index) in paylist" :key="index" @click="changeClick(item,index)">
+              <img :src="item.payImg" />
+            </li>
           </ul>
-          <p class="top_con--p">支付金额由平台暂时保管<br/>并按照任务进度付款给学生</p>
+        </div>
+
+        <p class="top_con--p">
+          支付金额由平台暂时保管
+          <br />并按照任务进度付款给学生
+        </p>
       </div>
     </div>
     <div class="content-footer">
@@ -72,9 +78,10 @@ export default {
   .laststep_top {
     margin-top: 10px;
     margin-bottom: 30px;
-     .top_title-input{
-        width: 20%;
-        margin-top: 20px;
+    .top_title-input {
+      display: block;
+      width: 20%;
+      margin-top: 20px;
     }
   }
   .top_title {
@@ -83,25 +90,23 @@ export default {
     line-height: 25px;
     margin: 40px 0;
   }
-  .top_con{
-      display: flex;
-      flex-direction:column;
-      ul{
-          margin-top: 20px;
-          display: flex;
-          justify-content: flex-start;
-          margin-left: -18px;
+  .top_con {
+    display: block;
+    ul {
+      display: inline;
+      margin-left: -18px;
+      li {
+        display: inline;
       }
-      .top_con--p{
-        //   color: white;
-          font-size: 10px;
-          margin-top: 10px;
-      }
+    }
+    .top_con--p {
+      //   color: white;
+      font-size: 10px;
+      margin-top: 10px;
+    }
   }
   .content-footer {
-      display: flex;
-      justify-content: flex-end;
-    //   padding-top: 50px;
+    text-align: right;
     .el-button {
       background: #c54f8b;
       color: white;
@@ -109,20 +114,19 @@ export default {
       padding: 10px 30px;
     }
   }
-
 }
 </style>
 <style lang="scss">
 .laststep {
- /deep/.el-input__inner {
-      background: #f5f5f5;
-      border: none;
-      border-radius:15px;
-      height: 30px;
-      line-height: 30px;
-    }
-    /deep/.el-input__icon {
+  /deep/.el-input__inner {
+    background: #f5f5f5;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
     line-height: 30px;
-    }
+  }
+  /deep/.el-input__icon {
+    line-height: 30px;
+  }
 }
 </style>

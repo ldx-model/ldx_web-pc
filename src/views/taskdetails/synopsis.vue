@@ -66,8 +66,6 @@ export default {
   }
   .aboutUs {
     width: 70%;
-    display: flex;
-    justify-content: flex-end;
     p {
       font-size: 12px;
       text-indent: 24px;

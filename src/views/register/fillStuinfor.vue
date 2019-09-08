@@ -1,5 +1,6 @@
 <template>
   <div class="student_news">
+
     <el-form
       :model="ruleForm"
       :rules="rules"
@@ -27,6 +28,7 @@
       <div class="operate-btn">
         <el-button type="primary" @click="submitForm('ruleForms')">下一步</el-button>
       </div>
+
     </el-form>
   </div>
 </template>

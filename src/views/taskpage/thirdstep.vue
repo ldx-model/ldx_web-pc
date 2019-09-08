@@ -44,9 +44,8 @@ export default {
     margin: 40px 0;
   }
   .content-footer {
-      display: flex;
-      justify-content: flex-end;
-      padding-top: 100px;
+    text-align: center;
+    padding-top: 100px;
     .el-button {
       background: #c54f8b;
       color: white;

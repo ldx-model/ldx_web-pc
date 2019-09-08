@@ -88,7 +88,6 @@ export default {
 .firststep {
   margin: 0 100px;
   .content_top {
-    width: 50%;
     margin-top: 10px;
     margin-bottom: 30px;
     .top_title {
@@ -98,18 +97,19 @@ export default {
       margin: 40px 0;
     }
     .top_title-ul {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
       margin: 80px 0;
+      li{
+        display: inline-block;
+        text-align: center;
+         margin-right:50px;
+      }
       p {
         margin: 10px 0;
       }
     }
   }
   .content-footer {
-      display: flex;
-      justify-content: flex-end;
+      text-align: right;
       padding-top: 100px;
     .el-button {
       background: #c54f8b;

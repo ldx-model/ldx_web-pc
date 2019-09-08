@@ -39,11 +39,10 @@ export default {}
       font-size: 15px;
     }
   .pages_ul {
-    display: flex;
+    display: inline;
     ul {
       margin: 0 100px;
-      display: flex;
-      flex-direction: column;
+      display: inline-block;
     }
     ul > li {
       font-size: 12px;

@@ -3,17 +3,30 @@
     <commonheader :showSearch="showSearch"></commonheader>
     <div class="secstep_top">
       <p class="top_title">
-        第二步<br />请填写任务标题和详细说明。
+        第二步
+        <br />请填写任务标题和详细说明。
       </p>
-      <div>
-          <div class="top_title-con">
-               <el-input class="top_title-input" v-model="form.title" placeholder="标题 输入吸引热度的标题"></el-input>
-               <ul class="top_title-ul" v-for="(item,index) in btnlist" :key="item.type">
-                   <li  :style="{background:item.colors}" :class="{'active':item.disable}"  @click="tabclick(item,index)">{{item.name}}</li>
-               </ul>
+      <!-- <div> -->
+        <div class="top_title-con">
+          <el-input class="top_title-input" v-model="form.title" placeholder="标题 输入吸引热度的标题"></el-input>
+          <div style="display:inline;">
+            <ul class="top_title-ul" v-for="(item,index) in btnlist" :key="item.type">
+              <li
+                :style="{background:item.colors}"
+                :class="{'active':item.disable}"
+                @click="tabclick(item,index)"
+              >{{item.name}}</li>
+            </ul>
           </div>
-        <el-input type="textarea" :rows="6" placeholder="请详细介绍任务需求，描述的越详细，越容易找到学生" v-model="form.textarea"></el-input>
-      </div>
+        </div>
+        <el-input
+          type="textarea"
+          :rows="6"
+          placeholder="请详细介绍任务需求，描述的越详细，越容易找到学生"
+          v-model="form.textarea"
+          style="margin-top:20px;"
+        ></el-input>
+      <!-- </div> -->
     </div>
     <div class="content-footer">
       <el-button round @click="next">下一步</el-button>
@@ -71,7 +84,11 @@ export default {
       this.form.tabname = this.btnlist[index].type
     },
     next () {
-      if (this.form.title !== '' && this.form.textarea !== '' && this.form.tabname !== '') {
+      if (
+        this.form.title !== '' &&
+        this.form.textarea !== '' &&
+        this.form.tabname !== ''
+      ) {
         this.$router.push('/thirdstep')
       }
     }
@@ -92,9 +109,8 @@ export default {
     margin: 40px 0;
   }
   .content-footer {
-      display: flex;
-      justify-content: flex-end;
-      padding-top: 100px;
+    text-align: right;
+    padding-top: 100px;
     .el-button {
       background: #c54f8b;
       color: white;
@@ -102,44 +118,41 @@ export default {
       padding: 10px 30px;
     }
   }
-  .top_title-con{
-      display: flex;
-      margin-bottom: 20px;
-      .top_title-ul{
-           display: flex;
-           align-items: flex-end;
-            color: #f5f5f5;
-          li{
-               margin-right: 10px;
-               padding: 8px 10px;
-               border-radius:10px;
-               font-size: 12px;
-
-          }
-      }
-    .top_title-input{
-        width: 30%;
-        margin-right: 20px;
+  .top_title-con {
+    display: inline;
+    .top_title-input {
+      width: 30%;
+      margin-right: 20px;
     }
-  }
-  .active{
-      color: #2c3e50;
-      background-color: #fff !important;
-      border:1px solid #F79D33;
-  }
+    .top_title-ul {
+      display: inline;
+      color: #f5f5f5;
+      li {
+        display: inline;
+        margin-right: 10px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+      }
+    }
 
+  }
+  .active {
+    color: #2c3e50;
+    background-color: #fff !important;
+    border: 1px solid #f79d33;
+  }
 }
-
 </style>
 <style lang="scss">
 .secstep {
-    .el-input__inner {
-      background: #f5f5f5;
-      border: none;
-    }
-    .el-textarea__inner{
-         background: #f5f5f5;
-      border: none;
-    }
+  .el-input__inner {
+    background: #f5f5f5;
+    border: none;
+  }
+  .el-textarea__inner {
+    background: #f5f5f5;
+    border: none;
+  }
 }
 </style>
