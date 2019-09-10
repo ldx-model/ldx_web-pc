@@ -14,7 +14,7 @@
       </el-col>
       <el-col :span="13">
         <div class="img_right">
-          <div v-for="(item,index) in imglist" :key="index" class="showimg">
+          <div v-for="(item,index) in list_img" :key="index" class="showimg">
             <img :src="item.link" class="img_show" alt />
           </div>
         </div>
@@ -40,15 +40,36 @@ export default {
     changs (index) {
       this.firstsrc = this.imglist[index].link
       this.imgIndex = index
+    },
+    shows (data) {
+      var result = []
+      var groupItem
+      for (var i = 0; i < data.length; i++) {
+        if (i % 4 === 0) {
+          groupItem != null && result.push(groupItem)
+          groupItem = []
+        }
+        groupItem.push(data[i])
+      }
+      result.push(groupItem)
+      return result
     }
+
   },
   watch: {
     imglist (val) {
       console.log(val, 99999)
     }
   },
+  computed: {
+    // 只取前4条图片的数据
+    list_img: function () {
+      return this.imglist.slice(0, 4)
+    }
+  },
   mounted () {
     this.changs(0)
+    this.shows(this.imglist)
   }
 }
 </script>

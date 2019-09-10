@@ -2,7 +2,7 @@
   <div class="task_detail">
     <commonheader :showSearch="showSearch"></commonheader>
     <heads :information="information" style="margin-top:10px;"></heads>
-    <div style="margin-top:50px;">
+    <div style="margin-top:50px;" class="task_btn">
       <p>任务进度</p>
       <el-button round class="confirm" @click="dialogClick">进行阶段确认</el-button>
       <el-button round class="deliver" @click="taskpay">任务交付</el-button>
@@ -18,7 +18,7 @@
         <filldown :dowmlist="dowmlist" :pastDowmlist="pastDowmlist"></filldown>
       </el-col>
     </el-row>
-    <div style="display:flex;justify-content:center;">
+    <div style="display:flex;justify-content:center;margin-top:10px;" class="task_btn">
       <el-button round class="confirm">取消发布</el-button>
       <el-button round class="confirm">再次编辑</el-button>
       <el-button round class="confirm">确认申请人</el-button>
@@ -102,12 +102,14 @@ export default {
   .student_pages--foot {
     margin: 50px 100px 40px 0px;
   }
-  .el-button {
-    background: #c54f8b;
-    color: white;
-    border: none;
-    padding: 7px 20px;
-    margin-top: 30px;
+  .task_btn {
+    .el-button {
+      background: #c54f8b;
+      color: white;
+      border: none;
+      padding: 7px 20px;
+      margin-top: 30px;
+    }
   }
 }
 </style>
