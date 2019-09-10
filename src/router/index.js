@@ -82,6 +82,11 @@ export default new Router({
       path: '/taskhall',
       name: 'taskhall',
       component: (resolve) => require(['@/views/taskHall'], resolve)
+    },
+    {
+      path: '/taskdetails',
+      name: 'taskdetails',
+      component: (resolve) => require(['@/views/taskdetails/taskdetails'], resolve)
     }
   ]
 })

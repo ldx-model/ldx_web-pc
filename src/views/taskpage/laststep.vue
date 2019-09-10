@@ -66,7 +66,7 @@ export default {
     },
     next () {
       if (this.money !== '' && this.date1 !== '' && this.paytype !== '') {
-        // this.$router.push('/laststep')
+        this.$router.push('/taskdetails')
       }
     }
   }

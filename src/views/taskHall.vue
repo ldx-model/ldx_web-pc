@@ -104,7 +104,7 @@ export default {
 </style>
 <style lang="scss">
 .hall {
-  /deep/.pasttask .pasttask_con[data-v-4b74f6b6] {
+  .pasttask .pasttask_con[data-v-4b74f6b6] {
     background: #f5f5f5;
   }
 }
